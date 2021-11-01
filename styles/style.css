@@ -21,16 +21,36 @@ img {
     url(../images/background.png);
 }
 
+/*Header CSS */
 .header {
-  margin-top: 30px;
+  height: 70px;
   grid-column: 1/ -1;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-right: 50px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .header-start {
   margin-left: 50px;
+}
+
+.emoji {
+  transform-origin: center bottom;
+  animation: emoji-move 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes emoji-move {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
 }
 
 .btn-home,
@@ -55,10 +75,19 @@ img {
   color: white;
 }
 
+.btn-fb,
+.btn-insta {
+  margin-right: 15px;
+}
+
+.btn-insta {
+  margin-left: auto;
+}
+
+/*Main content CSS*/
 .content {
   grid-column: 1/ -1;
   display: flex;
-  flex-direction: row-reverse;
   margin-left: 50px;
   justify-content: center;
   align-items: center;
@@ -84,4 +113,97 @@ img {
 
 h1 {
   font-size: 64px;
+}
+
+/*CSS for tablets */
+.btn-contact-handheld:visited,
+.btn-work-handheld:visited {
+  color: black;
+}
+
+.header-handheld {
+  height: 4.8em;
+  grid-column: 1/ -1;
+  display: none;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: sticky;
+  background-color: #fdde8a;
+  top: 0;
+  left: 0;
+}
+
+.btn-work-handheld,
+.btn-contact-handheld {
+  border-bottom: 5px solid #dd5350;
+  color: black;
+  margin-right: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 3px;
+  font: 0.8em "Fira Sans", sans-serif;
+  transition: background-color 1s;
+  top: 0;
+  font-size: large;
+  position: absolute;
+}
+
+.btn-work-handheld {
+  left: 0;
+  margin-left: 2em;
+}
+
+.btn-contact-handheld {
+  left: 185px;
+}
+
+.btn-work-handheld:hover,
+.btn-contact-handheld:hover {
+  background-color: #dd5350;
+  color: white;
+}
+
+/*Footer CSS */
+.footer {
+  grid-column: 1/ -1;
+  width: 100%;
+  height: 4.8rem;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdde8a;
+  display: none;
+}
+
+.btn-home-footer {
+  margin-right: 1rem;
+}
+
+@media (max-width: 960px) {
+  .header-start,
+  .header-middle,
+  .header-end,
+  .btn-contactus {
+    display: none;
+  }
+
+  .header-handheld {
+    display: block;
+  }
+
+  .footer {
+    display: flex;
+  }
+
+  .content {
+    flex-wrap: wrap;
+  }
+}
+
+/*CSS for mobiles */
+@media (max-width: 320px) {
 }
