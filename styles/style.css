@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Zen;
+  src: url(../fonts/ZenAntiqueSoft-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+
 a {
   text-decoration: none;
 }
@@ -19,7 +29,7 @@ img {
   margin: 0;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
-  background: no-repeat center/90% url(../images/background.png),
+  background: no-repeat center/90% url(../images/background.xcf),
     url(../images/background.png);
 }
 
@@ -30,13 +40,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-
-.header-start {
-  margin-left: 3rem;
+  margin: 2rem 3rem 1rem;
 }
 
 .emoji {
@@ -65,14 +69,12 @@ img {
 .btn-contact {
   color: black;
   margin-right: 0.3rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 3.5rem 1rem 3.5rem;
   border-radius: 0.2rem;
   background-color: #fdde8a;
   font: 0.9rem "Fira Sans", sans-serif;
   transition: background-color 1s;
+  font-family: Roboto;
 }
 
 .btn-home:hover,
@@ -87,10 +89,6 @@ img {
   margin-right: 1rem;
 }
 
-.btn-insta {
-  margin-left: auto;
-}
-
 /*Main content CSS*/
 .content {
   grid-column: 1/ -1;
@@ -101,20 +99,46 @@ img {
   align-items: center;
 }
 
-.image-avatar {
-  width: 30rem;
+.div-intro-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 60rem;
 }
 
-.div-heading {
-  width: 70rem;
+.work {
+  grid-column: 1/ -1;
+  margin: auto 2rem;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+.img-video-container {
+  margin: 2rem 6rem 2rem 4rem;
+  border-radius: 2rem;
+}
+
+video {
+  border-radius: 2rem;
+  box-shadow: 1rem 1rem 1rem 1rem black;
+}
+
+.explanation-work {
+  font-family: Roboto;
+  margin-right: 4rem;
 }
 
 .heading {
   font-size: 4rem;
+  font-family: Zen;
 }
 
 .sub-heading {
   font-size: 1.5rem;
+  font-family: Roboto-Regular;
 }
 
 .btn-contactus {
@@ -146,7 +170,6 @@ img {
   grid-column: 1/ -1;
   display: none;
   position: relative;
-  margin-top: 2rem;
   margin-bottom: 2rem;
   position: sticky;
   background-color: #fdde8a;
@@ -275,7 +298,7 @@ img {
   }
 
   .header-handheld:hover {
-    height: 19.5rem;
+    height: 20.5rem;
   }
 
   .header-handheld:hover .btn-home-drop,
