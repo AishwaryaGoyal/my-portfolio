@@ -16,8 +16,6 @@ img {
 
 .container {
   display: grid;
-  margin: 0;
-  gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
   background: no-repeat center/90% url(../images/background.png),
     url(../images/background.png);
@@ -25,18 +23,18 @@ img {
 
 /*Header CSS */
 .header {
-  height: 4.4rem;
+  height: 10.12rem;
   grid-column: 1/ -1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-right: 6.9rem;
+  margin-top: 4.6rem;
+  margin-bottom: 6.9rem;
 }
 
 .header-start {
-  margin-left: 3rem;
+  margin-left: 6.9rem;
 }
 
 .emoji {
@@ -45,10 +43,6 @@ img {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
-}
-
-.emoji:hover {
-  animation: none;
 }
 
 @keyframes emoji-move {
@@ -64,14 +58,14 @@ img {
 .btn-work,
 .btn-contact {
   color: black;
-  margin-right: 0.3rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-radius: 0.2rem;
+  margin-right: 0.69rem;
+  padding-left: 6.9rem;
+  padding-right: 6.9rem;
+  padding-top: 2.3rem;
+  padding-bottom: 2.3rem;
+  border-radius: 0.69rem;
   background-color: #fdde8a;
-  font: 0.9rem "Fira Sans", sans-serif;
+  font: 2.07rem "Fira Sans", sans-serif;
   transition: background-color 1s;
 }
 
@@ -84,7 +78,7 @@ img {
 
 .btn-fb,
 .btn-insta {
-  margin-right: 1rem;
+  margin-right: 2.3rem;
 }
 
 .btn-insta {
@@ -95,36 +89,35 @@ img {
 .content {
   grid-column: 1/ -1;
   display: flex;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 6.9rem;
   justify-content: center;
   align-items: center;
 }
 
 .image-avatar {
-  width: 30rem;
+  width: 69rem;
 }
 
 .div-heading {
-  width: 70rem;
+  width: 161rem;
 }
 
 .heading {
-  font-size: 4rem;
+  font-size: 9.2rem;
 }
 
 .sub-heading {
-  font-size: 1.5rem;
+  font-size: 3.45rem;
 }
 
 .btn-contactus {
   color: white;
   background-color: #dd5350;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-radius: 0.2rem;
+  padding-left: 6.9rem;
+  padding-right: 6.9rem;
+  padding-top: 2.3rem;
+  padding-bottom: 2.3rem;
+  border-radius: 0.46rem;
 }
 
 .btn-contactus:visited {
@@ -142,29 +135,28 @@ img {
 }
 
 .header-handheld {
-  height: 4.8rem;
+  height: 11.04rem;
   grid-column: 1/ -1;
   display: none;
   position: relative;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 4.6rem;
+  margin-bottom: 4.6rem;
   position: sticky;
   background-color: #fdde8a;
   top: 0;
   left: 0;
-  transition: height 1s;
 }
 
 .btn-work-handheld,
 .btn-contact-handheld {
-  border-bottom: 0.3rem solid #dd5350;
+  border-bottom: 0.69rem solid #dd5350;
   color: black;
-  padding-left: 2.7rem;
-  padding-right: 2.7rem;
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
-  border-radius: 0.2rem;
-  font: 0.7rem "Fira Sans", sans-serif;
+  padding-left: 4.37rem;
+  padding-right: 4.37rem;
+  padding-top: 2.07rem;
+  padding-bottom: 2.07rem;
+  border-radius: 0.46rem;
+  font: 1.61rem "Fira Sans", sans-serif;
   transition: background-color 1s;
   top: 0;
   font-size: large;
@@ -173,12 +165,12 @@ img {
 
 .btn-work-handheld {
   left: 0;
-  margin-left: 2rem;
-  margin-right: 1rem;
+  margin-left: 4.6rem;
+  margin-right: 2.3rem;
 }
 
 .btn-contact-handheld {
-  left: 13rem;
+  left: 25.3rem;
 }
 
 .btn-work-handheld:hover,
@@ -190,7 +182,8 @@ img {
 /*Footer CSS */
 .footer {
   grid-column: 1/ -1;
-  height: 4.8rem;
+  width: 100%;
+  height: 11.04rem;
   position: sticky;
   bottom: 0;
   justify-content: center;
@@ -200,7 +193,7 @@ img {
 }
 
 .btn-home-footer {
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .btn-home-footer:hover .fa-home,
@@ -230,70 +223,5 @@ img {
 }
 
 /*CSS for mobiles */
-.btn-menu,
-.btn-home-drop,
-.btn-work-drop,
-.btn-contact-drop,
-.btn-about-drop {
-  display: none;
-  margin-bottom: 0.8rem;
-  color: white !important;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  border-radius: 0.2rem;
-  font: 1rem "Fira Sans", sans-serif;
-  transition: background-color 1s;
-}
-
-.fa-bars {
-  color: white;
-}
-
-.btn-home-drop:hover,
-.btn-work-drop:hover,
-.btn-contact-drop:hover,
-.btn-about-drop:hover {
-  border-left: 1rem solid #dd5350;
-  background-color: #dd5350;
-}
-
-@media (max-width: 390px) {
-  .btn-work-handheld,
-  .btn-contact-handheld,
-  .footer {
-    display: none;
-  }
-
-  .header-handheld {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .btn-menu {
-    display: block;
-  }
-
-  .header-handheld:hover {
-    height: 19.5rem;
-  }
-
-  .header-handheld:hover .btn-home-drop,
-  .header-handheld:hover .btn-work-drop,
-  .header-handheld:hover .btn-contact-drop,
-  .header-handheld:hover .btn-about-drop {
-    display: block;
-  }
-
-  .content {
-    flex-wrap: wrap;
-  }
-
-  .heading {
-    font-size: 2rem;
-  }
-
-  .sub-heading {
-    font-size: 1rem;
-  }
+@media (max-width: 320px) {
 }
