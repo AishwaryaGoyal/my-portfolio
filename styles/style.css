@@ -59,7 +59,7 @@ video {
   display: grid;
   margin: 0;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   background: no-repeat center/90% url(../images/background.xcf),
     url(../images/background.png);
 }
@@ -224,24 +224,29 @@ video {
 /*Work page */
 .works {
   grid-column: 1/ -1;
-  column-count: auto;
-  column-width: 20rem;
-  column-gap: 1rem;
+  margin: 1rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-auto-flow: row dense;
+  gap: 1rem;
+}
+
+.works img {
+  width: 100%;
 }
 
 .img-video-container {
-  margin-bottom: 1rem;
-  background-color: black;
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 
 .img-video-container img {
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 
 .img-video-container:hover img {
   cursor: zoom-in;
-  opacity: 0.6;
+  /*opacity: 0.6;*/
+  transform: scale(1.5);
 }
 
 .video-container {
@@ -324,7 +329,7 @@ video {
 .btn-work-handheld:hover,
 .btn-contact-handheld:hover {
   background-color: #dd5350;
-  color: white;
+  color: white !important;
 }
 
 /*Footer CSS */
@@ -366,6 +371,10 @@ video {
   .work {
     flex-wrap: wrap;
     align-items: flex-start;
+  }
+
+  .works {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 
   video {
@@ -436,6 +445,10 @@ video {
   .content,
   .work- {
     flex-wrap: wrap;
+  }
+
+  .works {
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
   }
 
   .vlarge-text {
