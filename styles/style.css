@@ -27,6 +27,22 @@
   src: url(../fonts/Roboto-Regular.ttf);
 }
 
+@font-face {
+  font-family: Fruktur-Regular;
+  src: url(../fonts/Fruktur-Regular.ttf);
+}
+
+@font-face {
+  font-family: BirthstoneBounce-Regular;
+  src: url(../fonts/BirthstoneBounce-Regular.ttf);
+}
+
+/*To remove default inline behaviour of all images and videos*/
+img,
+video {
+  display: block;
+}
+
 span {
   background-color: #fdde8a;
 }
@@ -49,12 +65,6 @@ span {
   color: black;
 }
 
-/*To remove default inline behaviour of all images and videos*/
-img,
-video {
-  display: block;
-}
-
 .container {
   display: grid;
   margin: 0;
@@ -72,6 +82,22 @@ video {
   align-items: center;
   justify-content: space-between;
   margin: 2rem 3rem 1rem;
+}
+
+.header-start,
+.header-middle {
+  margin-right: 1rem;
+}
+
+.header-middle {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.header-end {
+  display: flex;
+  justify-content: center;
 }
 
 .emoji {
@@ -104,9 +130,10 @@ video {
 
 .btn-home,
 .btn-work,
-.btn-contact {
+.btn-contact,
+.btn-about {
   color: black;
-  margin-right: 0.3rem;
+  margin-right: 0.5rem;
   padding: 1rem 3.5rem 1rem 3.5rem;
   border-radius: 0.2rem;
   background-color: #fdde8a;
@@ -117,7 +144,8 @@ video {
 
 .btn-home:hover,
 .btn-work:hover,
-.btn-contact:hover {
+.btn-contact:hover,
+.btn-about:hover {
   background-color: #dd5350;
   color: white;
 }
@@ -233,6 +261,8 @@ video {
 
 .works img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .img-video-container {
@@ -245,8 +275,56 @@ video {
 
 .img-video-container:hover img {
   cursor: zoom-in;
-  /*opacity: 0.6;*/
   transform: scale(1.5);
+  object-fit: contain;
+}
+
+/*About page*/
+.about {
+  grid-column: 1/ -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  margin: 2rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-left {
+  column-count: 2;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-butterfly {
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border: 1rem solid #dd5350;
+}
+
+.img-mypic {
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: 1rem solid #dd5350;
+}
+
+.about-para1,
+.about-para2 {
+  padding: 1rem;
+  font-family: Roboto-Regular;
+  font-size: large;
+  color: white;
+  background-color: #dd5350;
+  border-radius: 1rem;
 }
 
 .video-container {
@@ -384,6 +462,14 @@ video {
   .explanation-work {
     margin-top: 0;
   }
+
+  .about {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  .about-left {
+    column-count: 1;
+  }
 }
 
 /*CSS for mobiles */
@@ -470,5 +556,13 @@ video {
 
   .video-container {
     margin-bottom: 1rem;
+  }
+
+  .about {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .about-left {
+    column-count: 1;
   }
 }
