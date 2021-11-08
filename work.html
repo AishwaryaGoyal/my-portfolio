@@ -5,13 +5,16 @@
       src="https://kit.fontawesome.com/168a5f90e1.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="script.js" defer></script>
+
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="shortcut icon" href="favicons/work.svg" />
     <title>Work</title>
   </head>
 
   <body>
-    <div class="container">
+    <div id="container" class="container">
       <!--For handheld device-->
       <div class="header-handheld">
         <a
@@ -68,18 +71,21 @@
           <a
             class="btn-fb"
             href="https://www.facebook.com/aishwarya.goyal.37625/"
+            target="_blank"
             role="button"
             ><i class="fab fa-facebook fa-2x" style="color: blue"></i
           ></a>
           <a
             class="btn-insta"
             href="https://www.instagram.com/bling2292/"
+            target="_blank"
             role="button"
             ><i class="fab fa-instagram fa-2x" style="color: crimson"></i
           ></a>
           <a
             class="btn-twit"
             href="https://twitter.com/Aurora2292"
+            target="_blank"
             role="button"
             ><i class="fab fa-twitter fa-2x" style="color: blue"></i
           ></a>
@@ -88,7 +94,7 @@
 
       <div class="works">
         <div class="img-video-container">
-          <img src="images/dora-boots.jpg" />
+          <img src="images/dora-boots.jpg" onclick="imageClick(src)" />
         </div>
 
         <div class="img-video-container">

@@ -72,6 +72,7 @@ span {
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   background: no-repeat center/90% url(../images/background.xcf),
     url(../images/background.png);
+  justify-content: center;
 }
 
 /*Header CSS */
@@ -245,12 +246,115 @@ span {
 
 .work {
   grid-column: 1/ -1;
-  margin: auto 2rem;
+  margin: 0 2rem;
   display: flex;
   background-color: white;
   justify-content: center;
   align-items: center;
   border-radius: 2rem;
+}
+
+.carousel {
+  grid-column: 1/ -1;
+  justify-self: center;
+  position: relative;
+  width: 50rem;
+  max-width: 50rem;
+  height: 30rem;
+  animation: carousel-animate 50s linear 0s infinite;
+}
+
+#radio1 {
+  position: absolute;
+  top: 94%;
+  left: 20%;
+  vertical-align: bottom;
+}
+
+#radio2 {
+  position: absolute;
+  top: 94%;
+  left: 24%;
+  vertical-align: bottom;
+}
+
+#radio3 {
+  position: absolute;
+  top: 94%;
+  left: 28%;
+  vertical-align: bottom;
+}
+
+#radio4 {
+  position: absolute;
+  top: 94%;
+  left: 32%;
+  vertical-align: bottom;
+}
+
+#radio5 {
+  position: absolute;
+  top: 94%;
+  left: 36%;
+  vertical-align: bottom;
+}
+
+#radio1:checked .carousel {
+  background: no-repeat center url("../images/swans.jpg");
+}
+
+#radio2:checked ~ .carousel {
+  background: no-repeat center url("../images/child-landscape.jpg");
+}
+
+#radio3:checked ~ .carousel {
+  background: no-repeat center url("../images/seascape-landscape.jpg");
+}
+
+#radio4:checked ~ .carousel {
+  background: no-repeat center url("../images/snow-landscape.jpg");
+}
+
+#radio5:checked ~ .carousel {
+  background: no-repeat center url("../images/powerpuff.jpg");
+}
+
+.fa-arrow-alt-circle-left {
+  position: absolute;
+  margin-right: 110%;
+  margin-top: 25%;
+}
+
+.fa-arrow-alt-circle-right {
+  position: absolute;
+  margin-left: 96%;
+  margin-top: 25%;
+}
+
+.fa-arrow-alt-circle-left,
+.fa-arrow-alt-circle-right {
+  color: white;
+}
+
+@keyframes carousel-animate {
+  0% {
+    background: no-repeat center url("../images/swans.jpg");
+  }
+  20% {
+    background: no-repeat center url("../images/child-landscape.jpg");
+  }
+  40% {
+    background: no-repeat center url("../images/seascape-landscape.jpg");
+  }
+  60% {
+    background: no-repeat center url("../images/snow-landscape.jpg");
+  }
+  80% {
+    background: no-repeat center url("../images/powerpuff.jpg");
+  }
+  100% {
+    background: no-repeat center url("../images/swans.jpg");
+  }
 }
 
 /*Work page */
@@ -282,6 +386,7 @@ span {
   cursor: zoom-in;
   transform: scale(1.5);
   object-fit: contain;
+  backdrop-filter: blur(8px);
 }
 
 /*About page*/
@@ -289,7 +394,7 @@ span {
   grid-column: 1/ -1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  margin: 2rem;
+  margin: 1rem;
   gap: 2rem;
   justify-content: center;
   align-items: center;
@@ -452,12 +557,9 @@ video {
 
   .content,
   .work {
+    margin: 0 1rem;
     flex-wrap: wrap;
     align-items: flex-start;
-  }
-
-  .works {
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 
   video {
@@ -470,6 +572,7 @@ video {
 
   .about {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    margin: 0.5rem;
   }
 
   .about-left {
@@ -480,9 +583,9 @@ video {
     text-align: left !important;
   }
 
-  input,
-  textarea {
-    width: 14rem !important;
+  .works {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    margin: 0 1rem;
   }
 }
 
@@ -543,8 +646,9 @@ video {
   }
 
   .content,
-  .work- {
+  .work {
     flex-wrap: wrap;
+    margin: 0 0.2rem;
   }
 
   .works {
@@ -574,15 +678,11 @@ video {
 
   .about {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    margin: 0.2rem;
   }
 
   .about-left {
     column-count: 1;
-  }
-
-  input,
-  textarea {
-    width: 8rem !important;
   }
 
   textarea {
