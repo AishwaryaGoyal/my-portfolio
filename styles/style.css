@@ -475,6 +475,15 @@ video {
   .about-left {
     column-count: 1;
   }
+
+  label {
+    text-align: left !important;
+  }
+
+  input,
+  textarea {
+    width: 14rem !important;
+  }
 }
 
 /*CSS for mobiles */
@@ -570,6 +579,15 @@ video {
   .about-left {
     column-count: 1;
   }
+
+  input,
+  textarea {
+    width: 8rem !important;
+  }
+
+  textarea {
+    height: 8rem !important;
+  }
 }
 
 /*Contact Page*/
@@ -581,21 +599,16 @@ video {
 }
 
 form {
-  padding: 1em;
-  border: 0.0625rem solid#dd5350;
-  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
-ul {
-  list-style: none;
-}
-
-li {
-  margin: 1rem;
+section {
+  margin-bottom: 1rem;
+  margin-left: auto;
 }
 
 label {
-  display: inline-block;
   width: 5.625rem;
   text-align: right;
   font: 1rem Roboto-Regular;
@@ -604,22 +617,18 @@ label {
 input,
 textarea {
   font: 1em Roboto-Regular;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
   vertical-align: top;
-  width: 18.75rem;
-  border: 0.0625rem solid #dd5350;
+  width: 20rem;
+  border: 0.0625rem solid black;
 }
 
 textarea {
   height: 13rem;
 }
 
-input:focus,
-textarea:focus {
-  border-color: #000;
-}
-
 button {
-  margin-left: 6rem;
   padding: 0.8rem 1rem;
   background-color: #fdde8a;
   border-style: none;
