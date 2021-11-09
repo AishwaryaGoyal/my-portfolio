@@ -67,6 +67,7 @@ span {
 
 .container {
   display: grid;
+  position: relative;
   margin: 0;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
@@ -386,7 +387,14 @@ span {
   cursor: zoom-in;
   transform: scale(1.5);
   object-fit: contain;
-  backdrop-filter: blur(8px);
+}
+
+.img-video-container:hover {
+  z-index: 300;
+}
+
+.works:hover > .img-video-container:not(:hover) {
+  filter: blur(10px);
 }
 
 /*About page*/
@@ -691,6 +699,62 @@ video {
 }
 
 /*Contact Page*/
+
+.fa-heart {
+  color: #dd5350;
+}
+
+.heart1 {
+  left: 10rem;
+  position: absolute;
+  animation: heart-animation 10s steps(5, jump-start) 0s infinite;
+}
+
+.heart2 {
+  left: 20rem;
+  position: absolute;
+  animation: heart-animation 25s steps(5, jump-start) 0s infinite;
+}
+
+.heart3 {
+  left: 30rem;
+  position: absolute;
+  animation: heart-animation 12s steps(5, jump-start) 0s infinite;
+}
+
+.heart4 {
+  left: 60rem;
+  position: absolute;
+  animation: heart-animation 20s steps(5, jump-start) 0s infinite;
+}
+
+.heart5 {
+  left: 75rem;
+  position: absolute;
+  animation: heart-animation 18s steps(5, jump-start) 0s infinite;
+}
+
+@keyframes heart-animation {
+  0% {
+    top: -10rem;
+  }
+  25% {
+    top: 0rem;
+    transform: rotateY(180deg);
+  }
+  50% {
+    top: 10rem;
+    transform: rotateY(45deg);
+  }
+  75% {
+    top: 20rem;
+    transform: rotateZ(-30deg);
+  }
+  100% {
+    top: 30rem;
+    transform: rotateY(180deg);
+  }
+}
 
 .contact {
   grid-column: 1/ -1;
