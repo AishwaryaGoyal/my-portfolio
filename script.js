@@ -40,3 +40,13 @@ function menuClick() {
   document.getElementById("btnContactDrop").style.display = "block";
   document.getElementById("btnAboutDrop").style.display = "block";
 }
+
+const imagesCollection = [
+  "../images/swans.jpg",
+  "../images/child-landscape.jpg",
+  "../images/snow-landscape.jpg",
+  "../images/seascape-landscape.jpg",
+  "../images/powerpuff.jpg",
+];
+
+/*document.getElementById("carouselImage").src = imagesCollection[0];*/

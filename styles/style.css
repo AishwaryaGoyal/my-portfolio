@@ -264,43 +264,242 @@ body {
   width: 100%;
   height: 30rem;
   position: relative;
-  animation: carousel-animate 50s linear 0s infinite;
-  background: no-repeat center url("../images/swans.jpg");
+}
+
+@keyframes carousel-animate1 {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  20% {
+    opacity: 0;
+    display: none;
+  }
+  40% {
+    opacity: 0;
+    display: none;
+  }
+  60% {
+    opacity: 0;
+    display: none;
+  }
+  80% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes carousel-animate2 {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  20% {
+    opacity: 1;
+    display: block;
+  }
+  40% {
+    opacity: 0;
+    display: none;
+  }
+  60% {
+    opacity: 0;
+    display: none;
+  }
+  80% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes carousel-animate3 {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  20% {
+    opacity: 0;
+    display: none;
+  }
+  40% {
+    opacity: 1;
+    display: block;
+  }
+  60% {
+    opacity: 0;
+    display: none;
+  }
+  80% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes carousel-animate4 {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  20% {
+    opacity: 0;
+    display: none;
+  }
+  40% {
+    opacity: 0;
+    display: none;
+  }
+  60% {
+    opacity: 1;
+    display: block;
+  }
+  80% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes carousel-animate5 {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  20% {
+    opacity: 0;
+    display: none;
+  }
+  40% {
+    opacity: 0;
+    display: none;
+  }
+  60% {
+    opacity: 0;
+    display: none;
+  }
+  80% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+#carouselImage1,
+#carouselImage2,
+#carouselImage3,
+#carouselImage4,
+#carouselImage5 {
+  position: absolute;
+  opacity: 0;
+  left: 25%;
+  top: 25%;
+}
+
+/*
+#radio1:checked ~ .left-arrow {
+  opacity: 0;
+}
+
+#radio1:checked ~ #carouselImage1 {
+  opacity: 1;
+}
+
+#radio2:checked ~ #carouselImage2 {
+  opacity: 1;
+}
+
+#radio3:checked ~ #carouselImage3 {
+  opacity: 1;
+}
+
+#radio4:checked ~ #carouselImage4 {
+  opacity: 1;
+}
+
+#radio5:checked ~ #carouselImage5 {
+  opacity: 1;
+}
+
+#radio2:checked ~ .left-arrow {
+  opacity: 1;
+}*/
+
+#carouselImage1 {
+  animation: 50s linear 4s infinite running carousel-animate1;
+}
+
+#carouselImage2 {
+  animation: 50s linear 4s infinite running carousel-animate2;
+}
+
+#carouselImage3 {
+  animation: 50s linear 4s infinite running carousel-animate3;
+}
+
+#carouselImage4 {
+  animation: 50s linear 4s infinite running carousel-animate4;
+}
+
+#carouselImage5 {
+  animation: 50s linear 4s infinite running carousel-animate5;
 }
 
 #radio1 {
+  color: transparent;
   position: absolute;
   top: 94%;
-  left: 30%;
+  left: 45%;
   vertical-align: bottom;
+  /*animation: animate-dot1 50s linear 0s infinite;*/
 }
 
 #radio2 {
   position: absolute;
   top: 94%;
-  left: 32%;
+  left: 47%;
   vertical-align: bottom;
+  /*animation: animate-dot2 50s linear 0s infinite;*/
 }
 
 #radio3 {
   position: absolute;
   top: 94%;
-  left: 34%;
+  left: 49%;
   vertical-align: bottom;
+  /* animation: animate-dot3 50s linear 0s infinite;*/
 }
 
 #radio4 {
   position: absolute;
   top: 94%;
-  left: 36%;
+  left: 51%;
   vertical-align: bottom;
+  /*animation: animate-dot4 50s linear 0s infinite;*/
 }
 
 #radio5 {
   position: absolute;
   top: 94%;
-  left: 38%;
+  left: 53%;
   vertical-align: bottom;
+  /*animation: animate-dot5 50s linear 0s infinite;*/
 }
 
 .fa-arrow-alt-circle-left {
@@ -320,24 +519,108 @@ body {
   color: white;
 }
 
-@keyframes carousel-animate {
+@keyframes animate-dot1 {
   0% {
-    background: no-repeat center url("../images/swans.jpg");
+    checked: true;
   }
   20% {
-    background: no-repeat center url("../images/child-landscape.jpg");
+    checked: false;
   }
   40% {
-    background: no-repeat center url("../images/seascape-landscape.jpg");
+    checked: false;
   }
   60% {
-    background: no-repeat center url("../images/snow-landscape.jpg");
+    checked: false;
   }
   80% {
-    background: no-repeat center url("../images/powerpuff.jpg");
+    checked: false;
   }
   100% {
-    background: no-repeat center url("../images/swans.jpg");
+    checked: true;
+  }
+}
+
+@keyframes animate-dot2 {
+  0% {
+    checked: false;
+  }
+  20% {
+    checked: true;
+  }
+  40% {
+    checked: false;
+  }
+  60% {
+    checked: false;
+  }
+  80% {
+    checked: false;
+  }
+  100% {
+    checked: false;
+  }
+}
+
+@keyframes animate-dot3 {
+  0% {
+    checked: false;
+  }
+  20% {
+    checked: false;
+  }
+  40% {
+    checked: true;
+  }
+  60% {
+    checked: false;
+  }
+  80% {
+    checked: false;
+  }
+  100% {
+    checked: false;
+  }
+}
+
+@keyframes animate-dot4 {
+  0% {
+    checked: false;
+  }
+  20% {
+    checked: false;
+  }
+  40% {
+    checked: false;
+  }
+  60% {
+    checked: true;
+  }
+  80% {
+    checked: false;
+  }
+  100% {
+    checked: false;
+  }
+}
+
+@keyframes animate-dot5 {
+  0% {
+    checked: false;
+  }
+  20% {
+    checked: false;
+  }
+  40% {
+    checked: false;
+  }
+  60% {
+    checked: false;
+  }
+  80% {
+    checked: true;
+  }
+  100% {
+    checked: false;
   }
 }
 
@@ -668,7 +951,7 @@ video {
   }
 
   .about {
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) !important;
     margin: 0.2rem;
   }
 
@@ -676,12 +959,13 @@ video {
     column-count: 1 !important;
   }
 
-  textarea {
+  #msg {
     height: 8rem !important;
   }
 
-  input,
-  textarea,
+  #name,
+  #mail,
+  #msg,
   button {
     width: 18rem !important;
   }
@@ -764,8 +1048,9 @@ label {
   margin-bottom: 0.5rem;
 }
 
-input,
-textarea {
+#name,
+#mail,
+#msg {
   border: none;
   margin-bottom: 1.5rem;
   font: 1rem Roboto-Regular;
@@ -774,7 +1059,7 @@ textarea {
   width: 22rem;
 }
 
-textarea {
+#msg {
   height: 13rem;
 }
 
