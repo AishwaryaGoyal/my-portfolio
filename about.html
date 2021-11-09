@@ -6,13 +6,14 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="script.js" defer></script>
     <link rel="shortcut icon" href="favicons/about.svg" />
     <title>About</title>
   </head>
   <body background="images/background.png">
     <div class="container">
       <!--For handheld device-->
-      <div class="header-handheld">
+      <div class="header-handheld" id="headerHandheld">
         <a class="btn-work-handheld" href="work.html" role="button"
           ><b>Work</b></a
         >
@@ -21,15 +22,29 @@
         >
 
         <!--For mobile devices---floating menu-->
-        <a class="btn-menu" href="" role="button"
+        <a class="btn-menu" role="button" onclick="menuClick()"
           ><i class="fas fa-bars fa-2x"></i
         ></a>
-        <a class="btn-home-drop" href="index.html" role="button"><b>Home</b></a>
-        <a class="btn-work-drop" href="work.html" role="button"><b>Work</b></a>
-        <a class="btn-contact-drop" href="contact.html" role="button"
+        <a
+          class="btn-home-drop"
+          id="btnHomeDrop"
+          href="index.html"
+          role="button"
+          ><b>Home</b></a
+        >
+        <a class="btn-work-drop" id="btnWorkDrop" href="work.html" role="button"
+          ><b>Work</b></a
+        >
+        <a
+          class="btn-contact-drop"
+          id="btnContactDrop"
+          href="contact.html"
+          role="button"
           ><b>Contact</b></a
         >
-        <a class="btn-about-drop" href="" role="button"><b>About</b></a>
+        <a class="btn-about-drop" href="" id="btnAboutDrop" role="button"
+          ><b>About</b></a
+        >
       </div>
 
       <div class="header">
@@ -76,22 +91,12 @@
 
       <div class="about">
         <div class="about-left">
-          <img
-            class="img-butterfly"
-            src="images/butterfly.jpg"
-            width="300px"
-            height="380px"
-          />
+          <img class="img-butterfly" src="images/butterfly.jpg" />
           <h1 style="font-family: Fruktur-Regular">
             Right here,<br />
             Right now..
           </h1>
-          <img
-            class="img-mypic"
-            src="images/profile-pic.jpg"
-            width="320px"
-            height="380px"
-          />
+          <img class="img-mypic" src="images/profile-pic.jpg" />
         </div>
 
         <div class="about-right">
