@@ -272,10 +272,11 @@ body {
 
 .slides {
   border-radius: 2rem;
+  box-shadow: 10px -10px 5px black;
   display: flex;
   width: 45rem;
   height: 30rem;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   scrollbar-color: white transparent;
   scrollbar-width: thin;
@@ -298,9 +299,7 @@ body {
 }
 
 .slides img {
-  border-radius: 2rem;
   scroll-snap-align: start;
-  flex-shrink: 0;
   transform-origin: center center;
   object-fit: contain;
   /*position: absolute;
@@ -961,7 +960,7 @@ video {
     transform: rotateZ(-30deg);
   }
   100% {
-    top: 100%;
+    top: 90%;
     transform: rotateY(180deg);
   }
 }
