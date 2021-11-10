@@ -48,5 +48,3 @@ const imagesCollection = [
   "../images/seascape-landscape.jpg",
   "../images/powerpuff.jpg",
 ];
-
-/*document.getElementById("carouselImage").src = imagesCollection[0];*/
