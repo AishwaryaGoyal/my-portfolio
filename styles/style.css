@@ -43,10 +43,6 @@ video {
   display: block;
 }
 
-span {
-  background-color: #fdde8a;
-}
-
 .fa-pinterest {
   color: crimson;
 }
@@ -256,6 +252,103 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 2rem;
+}
+
+.burntumber,
+.crimsonred,
+.burntsienna,
+.yellowochre,
+.prussianblue,
+.cobaltblue {
+  display: inline-block;
+  position: relative;
+  margin-right: 0.3rem;
+  padding: 10px 0;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  transition: all 0.5s ease-in-out;
+}
+
+.burntumber {
+  background-color: #6e260e;
+}
+
+.crimsonred {
+  background-color: #990000;
+}
+
+.burntsienna {
+  background-color: #e97451;
+}
+
+.yellowochre {
+  background-color: #cb9d06;
+}
+
+.prussianblue {
+  background-color: #003153;
+}
+
+.cobaltblue {
+  background-color: #0047ab;
+}
+
+.burntumber a,
+.crimsonred a,
+.burntsienna a,
+.yellowochre a,
+.prussianblue a,
+.cobaltblue a {
+  display: none;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 130px;
+  height: 25px;
+}
+
+.burntumber:hover,
+.crimsonred:hover,
+.burntsienna:hover,
+.yellowochre:hover,
+.prussianblue:hover,
+.cobaltblue:hover {
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  width: 130px;
+  background-color: white;
+}
+
+.burntumber:hover a,
+.crimsonred:hover a,
+.burntsienna:hover a,
+.yellowochre:hover a,
+.prussianblue:hover a,
+.cobaltblue:hover a {
+  display: block;
+  opacity: 1;
+}
+
+.burntumber:hover {
+  border: 1px solid #6e260e;
+}
+.crimsonred:hover {
+  border: 1px solid #990000;
+}
+.burntsienna:hover {
+  border: 1px solid #e97451;
+}
+.yellowochre:hover {
+  border: 1px solid #cb9d06;
+}
+.prussianblue:hover {
+  border: 1px solid #003153;
+}
+.cobaltblue:hover {
+  border: 1px solid #0047ab;
 }
 
 .carousel {
@@ -540,33 +633,85 @@ body {
   gap: 1rem;
 }
 
-.works img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 0.5rem double #dd5350;
-}
-
 .img-video-container {
   border-radius: 2rem;
 }
 
 .img-video-container img {
   border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0.5rem double #dd5350;
 }
 
 .img-video-container:hover img {
   cursor: zoom-in;
-  transform: scale(2);
-  object-fit: contain;
+  /* transform: scale(2);
+  object-fit: contain;*/
 }
 
+/*
 .img-video-container:hover {
   z-index: 300;
+}*/
+
+/*.works:hover > .img-video-container:not(:hover) {
+  filter: blur(10px);
+}*/
+
+#transparentDiv {
+  background-color: black;
+  opacity: 0.8;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  animation: fade-in-trans 2s;
 }
 
-.works:hover > .img-video-container:not(:hover) {
-  filter: blur(10px);
+@keyframes fade-in-trans {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+#bigImage {
+  display: none;
+  position: fixed;
+  /* top: 5%;
+  left: 25%;*/
+  top: 50vh;
+  left: 50vw;
+  width: 50vw;
+  height: 90vh;
+  margin-top: -45vh;
+  margin-left: -25vw;
+}
+
+#bigImage > img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+#closeBtn {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+}
+
+#closeBtn:hover {
+  cursor: pointer;
+}
+
+.fa-window-close {
+  color: white;
 }
 
 /*About page*/
