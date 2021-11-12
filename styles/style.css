@@ -370,18 +370,14 @@ body {
   height: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  scrollbar-color: white transparent;
-  scrollbar-width: thin;
+  /*scrollbar-color: white transparent;
+  scrollbar-width: thin;*/
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
 
 .carousel > a:visited {
   color: white;
-}
-
-.carousel > a:active {
-  background-color: white;
 }
 
 .slides > div {
@@ -420,183 +416,36 @@ body {
   left: 180rem;
   top: 0;
 }
-/*
-@keyframes carousel-animate1 {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-    left: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes carousel-animate2 {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-    left: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes carousel-animate3 {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-    left: 0;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes carousel-animate4 {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 1;
-    left: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes carousel-animate5 {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-  }
-}
-
-#carouselImage1 {
-  animation: 50s linear 0s infinite running carousel-animate1;
-}
-
-#carouselImage2 {
-  animation: 50s linear 0s infinite running carousel-animate2;
-}
-
-#carouselImage3 {
-  animation: 50s linear 0s infinite running carousel-animate3;
-}
-
-#carouselImage4 {
-  animation: 50s linear 0s infinite running carousel-animate4;
-}
-
-#carouselImage5 {
-  animation: 50s linear 0s infinite running carousel-animate5;
-}
-
-#carouselImage1:hover,
-#carouselImage2:hover,
-#carouselImage3:hover,
-#carouselImage4:hover,
-#carouselImage5:hover {
-  animation: none;
-}*/
 
 #radio1 {
-  position: absolute;
-  top: 93%;
   left: 44%;
-  vertical-align: bottom;
-  /*animation: animate-dot1 50s linear 0s infinite;*/
 }
 
 #radio2 {
-  position: absolute;
-  top: 93%;
   left: 47%;
-  vertical-align: bottom;
-  /*animation: animate-dot2 50s linear 0s infinite;*/
 }
 
 #radio3 {
-  position: absolute;
-  top: 93%;
   left: 50%;
-  vertical-align: bottom;
-  /* animation: animate-dot3 50s linear 0s infinite;*/
 }
 
 #radio4 {
-  position: absolute;
-  top: 93%;
   left: 53%;
-  vertical-align: bottom;
-  /*animation: animate-dot4 50s linear 0s infinite;*/
 }
 
 #radio5 {
+  left: 56%;
+}
+
+#radio1,
+#radio2,
+#radio3,
+#radio4,
+#radio5 {
   position: absolute;
   top: 93%;
-  left: 56%;
+  background-clip: content-box;
   vertical-align: bottom;
-  /*animation: animate-dot5 50s linear 0s infinite;*/
 }
 
 #radio1:hover > .fa-square,
@@ -605,7 +454,6 @@ body {
 #radio4:hover > .fa-square,
 #radio5:hover > .fa-square {
   background-color: white;
-  background-clip: content-box;
 }
 
 .fa-square {
@@ -614,15 +462,24 @@ body {
 }
 
 #leftArrow {
+  opacity: 1;
   position: absolute;
-  margin-left: 0;
-  margin-top: -35%;
+  top: 50%;
+  right: 101%;
+  transition: all 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
 }
 
 #rightArrow {
+  opacity: 1;
   position: absolute;
-  margin-left: 96%;
-  margin-top: -35%;
+  top: 50%;
+  left: 101%;
+  transition: all 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
+}
+
+#leftArrow:hover,
+#rightArrow:hover {
+  transform: scale(1.5);
 }
 
 .fa-arrow-alt-circle-left,
