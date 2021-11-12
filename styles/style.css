@@ -199,7 +199,7 @@ body {
   margin-left: 3rem;
   margin-right: 3rem;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   border-bottom: solid #dd5350;
 }
 
@@ -395,7 +395,7 @@ body {
   left: 0;
   top: 0;*/
 }
-
+/*
 #carouselImage1 {
   left: 0;
   top: 0;
@@ -415,7 +415,7 @@ body {
 #carouselImage5 {
   left: 180rem;
   top: 0;
-}
+}*/
 
 #radio1 {
   left: 44%;
@@ -442,10 +442,11 @@ body {
 #radio3,
 #radio4,
 #radio5 {
+  opacity: 0.7;
   position: absolute;
   top: 93%;
-  background-clip: content-box;
-  vertical-align: bottom;
+  border: none;
+  animation: fade-in-arrowsRadios 2s;
 }
 
 #radio1:hover > .fa-square,
@@ -456,35 +457,61 @@ body {
   background-color: white;
 }
 
+#radio1:hover,
+#radio2:hover,
+#radio3:hover,
+#radio4:hover,
+#radio5:hover {
+  transform: scale(1.5);
+}
+
 .fa-square {
   color: white;
-  z-index: 300;
+  background-clip: content-box;
 }
 
 #leftArrow {
-  opacity: 1;
+  opacity: 0.7;
   position: absolute;
   top: 50%;
   right: 101%;
   transition: all 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
+  animation: fade-in-arrowsRadios 2s;
 }
 
 #rightArrow {
-  opacity: 1;
+  opacity: 0.7;
   position: absolute;
   top: 50%;
   left: 101%;
   transition: all 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
+  animation: fade-in-arrowsRadios 2s;
+}
+
+@keyframes fade-in-arrowsRadios {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+#leftArrow:hover .fa-arrow-alt-circle-left,
+#rightArrow:hover .fa-arrow-alt-circle-right {
+  color: #dd5350;
 }
 
 #leftArrow:hover,
 #rightArrow:hover {
-  transform: scale(1.5);
+  transform: scale(1.8);
+  cursor: pointer;
 }
 
 .fa-arrow-alt-circle-left,
 .fa-arrow-alt-circle-right {
   color: white;
+  transition: color 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
 }
 
 /*Work page */
@@ -532,8 +559,8 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  display: none;
   animation: fade-in-trans 2s;
+  display: none;
 }
 
 @keyframes fade-in-trans {
@@ -554,10 +581,21 @@ body {
   height: 90%;
 }
 
+@keyframes imageLoad {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 #bigImage > img {
   object-fit: contain;
   width: 100%;
   height: 100%;
+  animation: imageLoad 2s;
 }
 
 #closeBtn {
